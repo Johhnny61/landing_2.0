@@ -22,6 +22,11 @@ const Item = styled.li`
     border-bottom: none;
     padding-bottom: 0;
   }
+  @media (max-width: 1100px) {
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
 `;
 const Icon = styled.span`
   font-size: 1.15rem;

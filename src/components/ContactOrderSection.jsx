@@ -23,6 +23,7 @@ const Box = styled.div`
     flex-direction: column;
     gap: 24px;
     padding: 20px 8px;
+    align-items: stretch;
   }
 `;
 
@@ -32,6 +33,10 @@ const Col = styled.div`
   display: flex;
   flex-direction: column;
   align-items: stretch;
+
+  @media (max-width: 1100px) {
+    ${props => props.$order && `order: ${props.$order};`}
+  }
 `;
 
 const MapContainer = styled.div`
@@ -62,13 +67,13 @@ const ContactOrderSection = () => {
   return (
     <Section id="contacts">
       <Box>
-        <Col>
+        <Col $order={2}>
           <Contacts />
         </Col>
-        <Col>
+        <Col $order={3}>
           <MapContainer ref={mapRef} />
         </Col>
-        <Col>
+        <Col $order={1}>
           <OrderForm />
         </Col>
       </Box>
