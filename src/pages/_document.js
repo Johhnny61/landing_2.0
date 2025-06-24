@@ -1,5 +1,6 @@
 import Document, { Head, Html, Main, NextScript } from 'next/document';
 import { ServerStyleSheet } from 'styled-components';
+import Script from 'next/script';
 
 export default class MyDocument extends Document {
   static async getInitialProps(ctx) {
@@ -31,7 +32,24 @@ export default class MyDocument extends Document {
     return (
       <Html>
         <Head>
-          <script src="https://maps.api.2gis.ru/2.0/loader.js?pkg=full"></script>
+          <link rel="preconnect" href="https://fonts.googleapis.com" />
+          <link
+            rel="preconnect"
+            href="https://fonts.gstatic.com"
+            crossOrigin="true"
+          />
+          <link
+            href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap"
+            rel="stylesheet"
+          />
+          <link
+            href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&display=swap"
+            rel="stylesheet"
+          />
+          <Script
+            src="https://maps.api.2gis.ru/2.0/loader.js?pkg=full"
+            strategy="beforeInteractive"
+          />
         </Head>
         <body>
           <Main />

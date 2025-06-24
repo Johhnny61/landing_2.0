@@ -1,10 +1,8 @@
-import Header from '../components/Header';
-import Hero from '../components/Hero';
 import About from '../components/About';
 import Gallery from '../components/Gallery';
+import Header from '../components/Header';
+import Hero from '../components/Hero';
 import Steps from '../components/Steps';
-import OrderForm from '../components/OrderForm';
-import Contacts from '../components/Contacts';
 import ContactOrderSection from '../components/ContactOrderSection';
 import Reviews from '../components/Reviews';
 
