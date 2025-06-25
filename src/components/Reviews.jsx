@@ -52,19 +52,23 @@ const Card = styled(motion.div)`
   padding: 28px 22px 38px 22px;
   display: flex;
   flex-direction: column;
-  gap: 18px;
   position: relative;
+`;
+const NameStarsWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  margin-bottom: 12px;
 `;
 const Name = styled.div`
   font-weight: 600;
   font-size: 1.08rem;
-  margin-bottom: 4px;
 `;
 const Date = styled.div`
   font-size: 0.95rem;
   color: #888;
   position: absolute;
-  left: 22px;
+  right: 22px;
   bottom: 16px;
 `;
 const Text = styled.div`
@@ -89,8 +93,10 @@ const Reviews = () => (
             transition={{ delay: i * 0.12 }}
             viewport={{ once: true }}
           >
-            <Name>{r.name}</Name>
-            <Stars>★★★★★</Stars>
+            <NameStarsWrapper>
+              <Name>{r.name}</Name>
+              <Stars>★★★★★</Stars>
+            </NameStarsWrapper>
             <Text>“{r.text}”</Text>
             <Date>{r.date}</Date>
           </Card>
